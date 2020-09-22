@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;  
+}
+
+html{
+  font-size: 62.2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+.music_container{
+  width: 35rem;
+  height: 55rem;
+  background-color: whitesmoke;
+  background-image: linear-gradient( 114.2deg,  rgba(121,194,243,1) 22.6%, rgba(255,180,239,1) 67.7% );
+  border-radius: 2rem;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  text-align: center;
+}
+
+.music_container #title{
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: #171717;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  
+}
+
+.music_container #artist{
+  color: #292424;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
+}
+
+.img_container{
+  width: 25rem;
+  height: 25rem;
+  margin: auto;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.music_controls{
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.music_controls .fas{
+  color: #111111;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow (0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+
+.music_container .main_btn{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #111;
+  color: #f6f6f6;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music_controls .fas:hover{
+  color: grey;
+}
+
+.music_controls .fa-play:hover{
+  background-color: #f6f6f6;
+  color: #111;
+  box-shadow: 0 1rem 2rem 1.2rem rgba(0, 0, 0, 0.4);
+}
+
+.anime{
+  animation: rotatePlayer 3s linear infinite;
+}
+
+@keyframes rotatePlayer{
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Progress Bar and Time Duration*/
+
+.progressbar_container{
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.progress_div{
+  width: 100%;
+  height: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07),
+  0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07),
+  0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+  border-radius: 4rem;
+  position: relative;
+  margin-top: 0.5rem;
+  transition: width is linear;
+  -moz-transition: width is linear;
+  -o-transition: width is linear;
+  -webkit-transition: width is linear;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.progress{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 4rem;
+  transition: width is linear;
+  -moz-transition: width is linear;
+  -o-transition: width is linear;
+  -webkit-transition: width is linear;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.progress_duration{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+/* Define the slider width so that it scales properly */
+.slider_container { 
+  width: 100%; 
+  max-width: 400px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-left: 8px;
+  margin-top: 5px;
+} 
+  
+/* Modify the appearance of the slider */
+.volume_slider { 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  height: 5px; 
+  background: black; 
+  opacity: 0.7; 
+  -webkit-transition: .2s; 
+  transition: opacity .2s; 
+} 
+
+/* Modify the appearance of the slider thumb */
+ 
+.volume_slider::-webkit-slider-thumb { 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  width: 15px; 
+  height: 15px; 
+  background: white; 
+  cursor: pointer; 
+  border-radius: 50%; 
+} 
+  
+/* Change the opacity when mouse is hovered */
+ 
+.volume_slider:hover { 
+  opacity: 1.0; 
+} 
+  
+
+.volume_slider { 
+  width: 30%; 
+} 
+
+i.fa-volume-down, 
+i.fa-volume-up { 
+  padding: 10px; 
+} 
